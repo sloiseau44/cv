@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum Vitae de Daenerys Targaryen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: linear-gradient(to right, #3B7BA7 0%, #3B7BA7 50%, white 50%, white);
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+
+            max-width: 1000px;
+            height: 100%;
+            margin: auto;
+
+        }
+
+        .aside {
+            flex: none;
+            display: flex;
+            align-items: center;
+            width: 300px;
+            padding: 50px;
+            background: #3B7BA7;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 100%;
+        }
+
+        .main {
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+
+            background: white;
+        }
+
+        .name {
+            margin: 0;
+            font-family: 'Cinzel Decorative', cursive;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .name-firstname {
+            font-size: 60px;
+        }
+
+        .name-lastname {
+            font-size: 60px;
+            font-weight: 900;
+            color: #7ba73b;
+        }
+
+        .name-title {
+            margin-top: 30px;
+            font-size: 30px;
+            font-weight: normal;
+            color: #939393;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="aside">
+                <img src="avatar.jpg" class="avatar" alt="" />
+            </div>
+            <div class="main">
+                <h1 class="name">
+                    <span class="name-firstname">Daenerys</span>
+                    <span class="name-lastname">Targaryen</span>
+                    <span class="name-title">Briseuse de chaines</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

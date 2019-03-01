@@ -1,0 +1,121 @@
+* {
+	box-sizing: border-box;
+}
+
+.containerHeader, .containerLangues{
+	background: linear-gradient(90deg, #3B7BA7, #3B7BA7 50%, white 50%, white);
+}
+
+.containerMotivations{
+	background: linear-gradient(90deg, #367099 , #367099 50%,  #f5f5f5 50%,  #f5f5f5);
+}
+
+.header, .motivations, .langues{
+	max-width: 1000px;		
+	display:flex;
+	margin: 0 auto;	
+	
+}
+
+.header{	
+	height:100vh;
+}
+
+.aside, .main{
+	padding : 50px;
+	display : flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header .aside, .langues .aside{
+	width:300px;
+	background-color: #3B7BA7;
+	flex:none;
+
+}
+
+.motivations .aside{
+	width:300px;
+	background-color: #367099;
+	flex:none;
+}
+
+.header .aside img{
+	border-radius: 50%;
+	width: 100%;
+
+}
+
+.motivations .aside, .langues .aside{
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.header .main, .langues .main{	
+	flex: auto;
+	background-color: white;
+	min-height: 100vh;
+	color:#333;
+	position: relative;
+	font-family: Lato, Helvetica, sans-serif;
+	line-height: 1.75;
+	font-size: 20px;
+	
+}
+
+.header .main{
+	font-family: 'Cinzel Decorative', cursive;
+	position: relative;
+}
+
+h2{	
+	font-family: Lato, Helvetica, sans-serif;
+	line-height: 1.75;
+}
+
+.motivations .main{	
+	flex: auto;
+	background-color: white;
+	min-height: 100vh;
+	color:#333;
+	position: relative;
+	font-family: Lato, Helvetica, sans-serif;
+	line-height: 1.75;
+	font-size: 20px;
+}
+
+
+h1{
+	font-weight: bold;
+	font-size: 60px;
+	margin : 0;
+	line-height: 1;
+}
+
+.nom{
+	color: #7ba73b;
+	font-weight: bolder;
+}
+
+.titre{
+	color: #939393;
+	font-size: 30px;	
+	font-weight: normal;
+	margin:0;
+}
+
+.cartouche{
+	position: absolute;
+    bottom: 50px;
+	width: calc(100% - 100px);
+    table-layout: fixed;
+    border-top: 1px solid #939393;
+    font-size: 16px;
+}
+
+.cartouche th {
+    text-align: left;
+}
+
+

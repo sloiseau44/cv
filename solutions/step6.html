@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum Vitae de Daenerys Targaryen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Cinzel+Decorative:400,700,900" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 20px;
+            font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.75;
+            color: #333;
+        }
+
+        h2 {
+            font-weight: normal;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        h3 {
+            font-family: 'Cinzel Decorative', cursive;
+            margin: 0;
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        .section {
+            background: linear-gradient(to right, #3B7BA7 0%, #3B7BA7 50%, white 50%, white);
+        }
+
+        .section--odd {
+            background: linear-gradient(to right, #367099 0%, #367099 50%, #f5f5f5 50%, #f5f5f5);
+        }
+
+        .section--header {
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+
+            max-width: 1000px;
+            height: 100%;
+            margin: auto;
+        }
+
+        .aside {
+            flex: none;
+            display: flex;
+            justify-content: flex-end;
+            width: 30%;
+            padding: 6%;
+            background: #3B7BA7;
+            color: black;
+        }
+
+        .section--header .aside {
+            align-items: center;
+        }
+
+        .section--odd .aside {
+            background: #367099;
+        }
+
+        .main {
+            position: relative;
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6%;
+
+            background: white;
+        }
+
+        .section--odd .main {
+            background: #f5f5f5;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+
+            }
+
+            .aside {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section--header {
+                height: auto;
+            }
+        }
+
+        /* HEADER */
+
+        .avatar {
+            border-radius: 50%;
+            width: 100%;
+        }
+
+        .name {
+            margin: 0;
+            font-size: 60px;
+            font-family: 'Cinzel Decorative', cursive;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .name-lastname {
+            font-weight: 900;
+            color: #7ba73b;
+        }
+
+        .name-title {
+            margin-top: 30px;
+            font-size: 30px;
+            font-weight: normal;
+            color: #939393;
+        }
+
+        @media (max-width: 700px) {
+            .avatar {
+                width: 200px;
+                height: 200px;
+            }
+
+            .name {
+                font-size: 8vw;
+                text-align: center;
+            }
+        }
+
+        /* FILE */
+        .file {
+            position: absolute;
+            bottom: 50px;
+
+            width: calc(100% - 100px);
+            table-layout: fixed;
+            border-top: 1px solid #939393;
+            font-size: 16px;
+        }
+
+        .file th {
+            text-align: left;
+        }
+
+        @media (max-width: 700px) {
+            .file {
+                position: static;
+                margin-top: 12%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .file tbody {
+                display: flex;
+            }
+            .file tr {
+                flex: auto;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        /* LANG */
+        .lang,
+        .lang tbody,
+        .lang td,
+        .lang th {
+            display: block;
+        }
+
+        .lang tr {
+            display: flex;
+            width: 100%;
+            align-items: baseline;
+        }
+
+        .lang tr::after {
+             content: '';
+             display: block;
+             flex: auto;
+             border-bottom: 1px dotted;
+             height: 1px;
+             margin: 0 1em;
+         }
+
+        .lang td {
+            order: 1;
+        }
+
+        /* XP */
+        .xp-list {
+            list-style: none;
+            margin: 0 0 0 20px;
+            padding: 0;
+            counter-reset: xp;
+        }
+
+        .xp-list li {
+            position: relative;
+            counter-increment: xp;
+        }
+
+        h3::before {
+            content: counter(xp)'.';
+            position: absolute;
+            right: 100%;
+            margin-right: 10px;
+
+            font-weight: bold;
+            color: #7ba73b;
+        }
+
+        h3 + p {
+            margin-top: 0;
+        }
+
+        /* ANIMATION */
+        .animated {
+            transition: all 0.3s;
+        }
+        .invisible {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="section section--header">
+        <div class="container">
+            <div class="aside">
+                <img src="avatar.jpg" class="avatar"/>
+            </div>
+            <div class="main">
+                <h1 class="name">
+                    <div class="name-firstname">Daenerys</div>
+                    <div class="name-lastname">Targaryen</div>
+                    <div class="name-title">Briseuse de chaines</div>
+                </h1>
+                <table class="file">
+                    <tr>
+                        <th>Age</th>
+                        <th>Lieu</th>
+                        <th>Entreprise</th>
+                        <th>Twitter</th>
+                    </tr>
+                    <tr>
+                        <td>22 ans</td>
+                        <td>Peyredragon</td>
+                        <td>HBO</td>
+                        <td>@daenerys</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="section section--odd">
+        <div class="container">
+            <div class="aside">
+                <h2>Motivations</h2>
+            </div>
+            <div class="main" data-animated>
+                <p>
+                    Je sais être à la fois ferme et généreuse.
+                    Je m'investis dans des projets ambitieux comme faire abolir l'esclavage ou aider les plus malheureux.
+                    Mais je sais aussi punir sévèrement les personnes qui me font du tort.
+                </p>
+                <p>
+                    En plus de mon leadership naturel, certains de mes dons peuvent être utiles.
+                    Par exemple, je dispose d'une résistance naturelle au feu et à la chaleur grâce au sang de dragon qui coule dans mes veines.
+                    Ah, et j'ai des dragons aussi.
+                </p>
+                <p>Je recherche actuellement un poste de reine ou de chef des armées.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section ">
+        <div class="container">
+            <div class="aside">
+                <h2>Langues</h2>
+            </div>
+            <div class="main" data-animated>
+                <table class="lang">
+                    <tr>
+                        <th>Valyrien</th>
+                        <td>Langue maternelle</td>
+                    </tr>
+                    <tr>
+                        <th>Dothraki</th>
+                        <td>Couramment</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="section section--odd">
+        <div class="container">
+            <div class="aside">
+                <h2>Expériences</h2>
+            </div>
+            <div class="main">
+                <ol class="xp-list" data-animated>
+                    <li>
+                        <h3>Héritière du trône de fer</h3>
+                        <p>
+                            Fille légitime du roi Aerys II Targaryen et des Andals et des Premiers Hommes.
+                            Future reine d'environ 20 millions d'habitants.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Reine de Meereen</h3>
+                        <p>Meereen est l'une des trois plus grandes villes de la Baie des Serfs.</p>
+                    </li>
+                    <li>
+                        <h3>Chef des Puînés</h3>
+                        <p>Commandant d'une armée de mercenaires.</p>
+                    </li>
+                    <li>
+                        <h3>Chef des Immaculés</h3>
+                        <p>Chef d'une armée d'environ 8000 guerriers insensibles à la douleur.</p>
+                    </li>
+                    <li>
+                        <h3>Khaleesi de la Grande Mer Herbeuse</h3>
+                        <p>Chef d'une tribu de dothraki, environ 40000 personnes.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="aside">
+                <h2>Crédits</h2>
+            </div>
+            <div class="main" data-animated>
+                <p>Avatar <a href="https://www.deviantart.com/yamaorce/art/Mother-of-Dragons-369124315">©YamaOrce</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var animatedList = [];
+        Array.from(document.querySelectorAll('[data-animated]')).forEach(function(parent) {
+           Array.from(parent.children).forEach(function(child) {
+               animatedList.push(child);
+               child.classList.add('invisible');
+               child.classList.add('animated');
+           })
+        });
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > document.body.clientHeight - window.innerHeight - 50) {
+                animatedList.forEach(function (animated) {
+                    show(animated);
+                });
+            } else {
+                animatedList.forEach(function (animated) {
+                    var rect = animated.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 2 / 3) {
+                        show(animated);
+                    }
+                });
+            }
+        });
+
+        function show(element) {
+            element.classList.remove('invisible');
+        }
+    </script>
+</body>
+</html>

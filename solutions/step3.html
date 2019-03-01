@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum Vitae de Daenerys Targaryen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Cinzel+Decorative:400,700,900" rel="stylesheet">
+
+    <style>
+	* {
+	    box-sizing: border-box;
+	}
+
+	html {
+	    font-size: 20px;
+	    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    line-height: 1.75;
+	    color: #333;
+	}
+
+	h2 {
+	    font-weight: normal;
+	    font-size: 20px;
+	    margin: 0;
+	}
+
+	h3 {
+	    font-family: 'Cinzel Decorative', cursive;
+	    margin: 0;
+	}
+
+	p:first-child {
+	    margin-top: 0;
+	}
+
+	.section {
+	    background: linear-gradient(to right, #3B7BA7 0%, #3B7BA7 50%, white 50%, white);
+	}
+
+	.section--odd {
+	    background: linear-gradient(to right, #367099 0%, #367099 50%, #f5f5f5 50%, #f5f5f5);
+	}
+
+	.container {
+	    display: flex;
+
+	    max-width: 1000px;
+	    height: 100%;
+	    margin: auto;
+
+	}
+
+	.aside {
+	    flex: none;
+	    display: flex;
+	    justify-content: flex-end;
+	    width: 300px;
+	    padding: 50px;
+	    background: #3B7BA7;
+	    color: black;
+	}
+
+	.section--header .aside {
+	    align-items: center;
+	}
+
+	.section--odd .aside {
+	    background: #367099;
+	}
+
+	.main {
+	    flex: auto;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    padding: 50px;
+
+	    background: white;
+	}
+
+	.section--odd .main {
+	    background: #f5f5f5;
+	}
+
+	/* HEADER */
+	.section--header {
+	    height: 100vh;
+	}
+
+	.avatar {
+	    border-radius: 50%;
+	    width: 100%;
+	}
+
+	.name {
+	    margin: 0;
+	    font-family: 'Cinzel Decorative', cursive;
+	    font-weight: 700;
+	    line-height: 1;
+	}
+
+	.name-firstname {
+	    display: block;
+	    font-size: 60px;
+	}
+
+	.name-lastname {
+	    display: block;
+	    font-size: 60px;
+	    font-weight: 900;
+	    color: #7ba73b;
+	}
+
+	.name-title {
+	    display: block;
+	    margin-top: 30px;
+	    font-size: 30px;
+	    font-weight: normal;
+	    color: #939393;
+	}
+
+        /* FILE */
+        .file {
+            position: absolute;
+            bottom: 50px;
+
+            width: calc(100% - 100px);
+            table-layout: fixed;
+            border-top: 1px solid #939393;
+            font-size: 16px;
+        }
+
+        .file th {
+            text-align: left;
+        }
+
+</style>
+</head>
+<body>
+    <div class="section section--header">
+        <div class="container">
+            <div class="aside">
+                <img src="avatar.jpg" class="avatar" alt="" />
+            </div>
+            <div class="main">
+                <h1 class="name">
+                    <span class="name-firstname">Daenerys</span>
+                    <span class="name-lastname">Targaryen</span>
+                    <span class="name-title">Briseuse de chaines</span>
+                </h1>
+                <table class="file">
+                    <tr>
+                        <th>Age</th>
+                        <th>Lieu</th>
+                        <th>Entreprise</th>
+                        <th>Twitter</th>
+                    </tr>
+                    <tr>
+                        <td>22 ans</td>
+                        <td>Peyredragon</td>
+                        <td>HBO</td>
+                        <td>@daenerys</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="section section--odd">
+        <div class="container">
+            <div class="aside">
+                <h2>Motivations</h2>
+            </div>
+            <div class="main">
+                <p>
+                    Je sais être à la fois ferme et généreuse.
+                    Je m'investis dans des projets ambitieux comme faire abolir l'esclavage ou aider les plus malheureux.
+                    Mais je sais aussi punir sévèrement les personnes qui me font du tort.
+                </p>
+                <p>
+                    En plus de mon leadership naturel, certains de mes dons peuvent être utiles.
+                    Par exemple, je dispose d'une résistance naturelle au feu et à la chaleur grâce au sang de dragon qui coule dans mes veines.
+                    Ah, et j'ai des dragons aussi.
+                </p>
+                <p>Je recherche actuellement un poste de reine ou de chef des armées.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section ">
+        <div class="container">
+            <div class="aside">
+                <h2>Langues</h2>
+            </div>
+            <div class="main">
+                <table class="lang">
+                    <tr>
+                        <th>Valyrien</th>
+                        <td>Langue maternelle</td>
+                    </tr>
+                    <tr>
+                        <th>Dothraki</th>
+                        <td>Couramment</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="aside">
+                <h2>Crédits</h2>
+            </div>
+            <div class="main">
+                <p>Avatar sous Copywrite © <a href="https://www.deviantart.com/yamaorce/art/Mother-of-Dragons-369124315">YamaOrce</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
